@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Генератор мемов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1> Генератор мемов</h1>
+
+    <form action="/upload" id="create_mem" enctype="multipart/form-data" method="POST">
+        <input type="file" id="file_mem" name='file' placeholder="Загрузить фото">
+        <input type="text" id='text_mem_up' name='text_up' placeholder="Введите верхний текст">
+        <input type="text" id='text_mem_low' name='text_low' placeholder="Введите нижний текст">
+        <button type="submit">Создать мем</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

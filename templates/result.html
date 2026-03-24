@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мем готов!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ваш мем готов!</h1>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Ваш мем" style="max-width: 100%; border-radius: 8px;">
+    </div>
+    
+    <div style="text-align: center;">
+        <a href="{{ url_for('uploaded_file', filename=filename) }}" download>
+            <button>Скачать мем</button>
+        </a>
+        <a href="/">
+            <button style="background-color: #008CBA;">Создать новый мем</button>
+        </a>
+    </div>
+</body>
+</html>
